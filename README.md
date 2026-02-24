@@ -2,7 +2,7 @@
 
 A privacy-preserving machine learning pipeline that trains models across decentralized data sources without exposing raw data. Implements **Federated Averaging (FedAvg)** with **Differential Privacy (DP)** guarantees using gradient clipping and calibrated Gaussian noise injection.
 
-## 🎯 Project Overview
+##  Project Overview
 
 This project demonstrates how organizations can collaboratively train ML models while:
 - **Never sharing raw data** between participants (federated learning)
@@ -30,7 +30,7 @@ This project demonstrates how organizations can collaboratively train ML models 
     └─────────────────────────────────────────┘
 ```
 
-## 🛡️ Key Concepts
+##  Key Concepts
 
 | Concept | Implementation |
 |---|---|
@@ -40,7 +40,7 @@ This project demonstrates how organizations can collaboratively train ML models 
 | **Non-IID Data** | Dirichlet-based data partitioning across clients |
 | **Membership Inference Attack** | Shadow model attack to empirically validate DP protection |
 
-## 📦 Installation
+##  Installation
 
 ```bash
 # Clone the repository
@@ -56,7 +56,7 @@ source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
-## 🚀 Quick Start
+##  Start
 
 ### 1. Run the Full Pipeline
 
@@ -113,7 +113,7 @@ federated-learning-dp/
     └── analysis.ipynb        # Experiment analysis notebook
 ```
 
-## 📊 Results
+##  Results
 
 Typical results on MNIST with 5 clients, 30 rounds:
 
@@ -126,14 +126,14 @@ Typical results on MNIST with 5 clients, 30 rounds:
 
 > **MIA AUC = 0.50** means the attacker performs no better than random guessing → strong privacy.
 
-## 🔑 Key Takeaways
+##  Key Takeaways
 
 1. **Differential privacy provably bounds information leakage** — even a well-resourced attacker cannot reliably determine if a specific sample was in the training set.
 2. **Privacy comes at a utility cost** — higher noise (lower ε) reduces accuracy, requiring careful calibration.
 3. **Federated learning alone is not sufficient** — without DP, gradient updates can leak sensitive information via model inversion or membership inference attacks.
 4. **RDP composition provides tighter bounds** than naïve composition, enabling more training rounds within a privacy budget.
 
-## 📜 References
+##  References
 
 - McMahan et al., *Communication-Efficient Learning of Deep Networks from Decentralized Data* (2017)
 - Abadi et al., *Deep Learning with Differential Privacy* (2016)
